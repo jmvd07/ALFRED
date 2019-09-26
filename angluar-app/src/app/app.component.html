@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Preguntas frecuentes del Portal Naranja Comercios Amigos
+  </h1>
+  <h2>{{ dateTimeStamp }}</h2>
+</div>
+ <mat-accordion *ngIf="faqsList">
+   <mat-expansion-panel *ngFor="let faq of faqsList">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ faq.faqTitle }}</mat-panel-title>      
+    </mat-expansion-panel-header>
+    <div>
+      {{ faq.faqText }}
+    </div>
+   </mat-expansion-panel>
+ </mat-accordion>

@@ -10,7 +10,7 @@ import { FaqsService } from './faqs.service';
 export class AppComponent implements OnInit, OnDestroy {
  
   private _faqsSub: Subscription;
-  title = 'angluar-app';
+
   faqsList: any;
   dateTimeStamp = null;
   constructor(private faqsService: FaqsService) { } 
@@ -19,7 +19,6 @@ export class AppComponent implements OnInit, OnDestroy {
     this._faqsSub = this.faqsService.faqs.subscribe((faqs: any) => {
       this.faqsList = faqs.data.faqs;
       this.dateTimeStamp = faqs.data.date;
-      console.log("###### ", this.faqsList);
     })
   }
 
